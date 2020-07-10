@@ -5,7 +5,7 @@ Repository of XGBoost Analysis Tools used for Classification of Longitudinal-Lon
 process_GEANT.py : 
 
   - required input files: LL, LT, TL, TT output files from GEANT simulation
-  - parses through nominal tree to extract event information into a pandas dataframe
+  - parses through nominal tree to extract event information into a pandas dataframe (method from: https://gitlab.cern.ch/shuzhou/mva-in-bbll/-/blob/master/python/bbll/preprocess.py)
   - three options for selection cuts: no cuts, lepton cuts only, all cuts except costhetaW
 
 split.py :
