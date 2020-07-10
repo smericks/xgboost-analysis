@@ -20,8 +20,7 @@ xgb_unweighted.py :
 
 xgb_tuning.py :
   - based off of this tutorial: https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
-  - requires input files: Xtrain, Xtest, ytrain, ytest, Wtrain, Wtest (can be prepared using split.py), and original input file of data (prepared using      
-    process_GEANT.py)
+  - requires input files: Xtrain, Xtest, ytrain, ytest, Wtrain, Wtest (can be prepared using split.py), and original input file of data (prepared using process_GEANT.py)
   - uses grid search / cross validation to tune hyperparameters of XGBoost 
   - plots comparison of ROC curve before and after hyperparameter tuning
 
