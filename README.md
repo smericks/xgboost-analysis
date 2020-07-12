@@ -3,12 +3,13 @@
 Repository of XGBoost Analysis Tools used for Classification of Longitudinal-Longitudinal WZ Boson events
 
 process_GEANT.py : 
-
   - required input files: LL, LT, TL, TT output files from GEANT simulation
   - parses through nominal tree to extract event information into a pandas dataframe (method from: https://gitlab.cern.ch/shuzhou/mva-in-bbll/-/blob/master/python/bbll/preprocess.py)
   - three options for selection cuts: no cuts, lepton cuts only, all cuts except costhetaW
 
 split.py :
+  - requires input file of data w/ columns in this order: label features weight polarizationID (can be prepared with process_GEANT.py)
+  - splits into Xtrain, Xtest, ytrain, ytest, Wtrain, Wtest, Ptest and saves to .csv files
 
 xgb_weighted.py :
   - requires input files: Xtrain, Xtest, ytrain, ytest, Wtrain, Wtest, Ptest (can be prepared using split.py)
@@ -29,3 +30,6 @@ xgb_crossval.py :
   - performs 3-fold cross validation with reweighting of training events & early stopping rounds implemented to avoid overfitting
   - two options: concatenate 3 distinct test sets / output probability sets to create one set of ROC/probability distribution plots
                  plot three separate ROC/probability distribution plots, one for each round of train/test
+           
+helpers.py :
+  - helper functions used across all files kept here
